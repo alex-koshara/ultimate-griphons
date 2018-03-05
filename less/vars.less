@@ -1,0 +1,27 @@
+@blueDark: #283645;
+@pink: #d22856;
+@white: #fff;
+@white--45: fade(@white, 45%);
+@site-menu--active: #54d154;
+
+
+@blueLight: #b5b9be;
+@blueLight-30: fade(@blueLight, 30%);
+@brownLight: #f2f2f2;
+@black: #000;
+@black--80: fade(@black, 80%);
+
+// WIDTH
+@tablet: 700px;
+@desktop: 1025px;
+@mobile-only: 699px;
+
+@tablet-widths: ~"(min-width: @{tablet})";
+@desktop-widths: ~"(min-width: @{desktop})";
+@mobile-width-only: ~"(max-width: @{mobile-only})";
+@retina: ~"(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
+@retina-tablet: @tablet-widths and ~"(min-resolution: 144dpi)", @tablet-widths and ~"(min-resolution: 1.5dppx)";
+@retina-desktop: @desktop-widths and ~"(min-resolution: 144dpi)", @desktop-widths and ~"(min-resolution: 1.5dppx)";
+
+@primaryColor: @blueDark;
+@secondaryColor: @pink;
