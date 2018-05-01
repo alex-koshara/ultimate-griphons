@@ -1,0 +1,69 @@
+.game {
+  padding-top: 170px;
+  width: 30%;
+  padding-bottom: 20px;
+  display:  flex;
+  flex-direction: column;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 170px;
+    background-position: 50% 10px;
+    background-size: 150px 150px;
+    background-repeat: no-repeat;
+    transition: background-size .5s linear, transform 1s ;
+  }
+  &:hover::after {
+    animation: rotateDisk 20s infinite;
+
+  }
+  &.game--fristyle::after {
+    background-image: url('../img/fristyle.png');
+  }
+  &.game--golf::after {
+    animation:  none;
+    background-image: url('../img/golf.jpg');
+  }
+  &.game--city {
+    animation: none;
+    background-image: url('../img/icon-fris.jpg');
+    background-size: 150px 150px;
+    background-position: center 0;
+    background-repeat: no-repeat;
+  }
+}
+
+.game__title {
+  font-size: 24px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.game__desc {
+  line-height: 1.4;
+  padding-bottom: 20px;
+}
+
+.game__btn {
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes rotateDisk{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(20000deg);
+  }
+}

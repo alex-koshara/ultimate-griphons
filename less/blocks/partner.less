@@ -1,0 +1,22 @@
+.partner {
+  width: 25%;
+  height: 100px;
+  padding: 20px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: filter .4s linear;
+  filter: sepia(1);
+  &:hover {
+    filter: sepia(0);
+  }
+  &.partner--aero {
+    background-image: url('../img/logo-aero.png');
+  }
+}
+
+.partners__desc {
+  padding-right: 200px;
+  padding-left: 200px;
+}
